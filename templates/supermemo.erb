@@ -1,0 +1,12 @@
+<%-
+  gloss1=''
+  if (defined? glosswords) && glosswords[0]
+    gloss1 = glosswords[0]['word']
+    if glosswords[0]['sense']
+      gloss1 += " (#{glosswords[0]['sense']})"
+    end
+  end
+-%>
+Q: <%= word %>
+A: <%= rafsi_or_selmaho %><br /><%= gloss1 %><br /><%= definition %><br /><%= rank_up %>
+

@@ -1,0 +1,12 @@
+<%- # puts YAML.dump(words) -%>
+<%-
+  # puts YAML.dump(word)
+  gloss1=''
+  if (defined? glosswords) && glosswords[0]
+    gloss1 = glosswords[0]['word']
+    if glosswords[0]['sense']
+      gloss1 += " (#{glosswords[0]['sense']})"
+    end
+  end
+-%>
+<%= word %>	<%= gloss1 %>	<%= rafsi_or_selmaho %>	<%= definition %>
